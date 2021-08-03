@@ -1,0 +1,70 @@
+// RESET STYLE
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+// GLOBAL STYLE
+body {
+  background-color: #6f36ff;
+}
+
+// DRAGGABLE STYLE
+.wrapper {
+  top: 50%;
+  left: 50%;
+  width: 28.125rem;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(1.4);
+
+  header {
+    color: #6f36ff;
+    font-weight: 500;
+    font-size: 1.4375rem;
+    padding: 1.0625rem 1.875rem;
+    border-bottom: 1px solid #bfbfbf;
+
+    &.active {
+      cursor: move;
+      user-select: none;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.875rem 1.875rem 2.5rem;
+
+    .icon {
+      display: flex;
+      width: 5.9375rem;
+      height: 5.9375rem;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      border: 5px solid #6f36ff;
+
+      i {
+        color: #6f36ff;
+        font-size: 3.75rem;
+      }
+    }
+
+    .title {
+      font-size: 1.8125rem;
+      font-weight: 500;
+      margin: 0.9375rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
