@@ -1,0 +1,30 @@
+// RESET STYLE
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: translate;
+}
+
+// GLOBAL STYLE
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background: linear-gradient(#252930 50%, #5372f0 50%);
+}
+
+// STYLES
+button {
+  border: none;
+  outline: none;
+  margin: 0 1rem;
+  cursor: pointer;
+  color: #5372f0;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 3.125rem;
+  background-color: #fff;
+  padding: 1.5625rem 2.875rem;
+}
