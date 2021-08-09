@@ -1,0 +1,156 @@
+// RESET STYLE
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: translate;
+}
+
+// GLOBAL STYLE
+body {
+  display: grid;
+  min-height: 100vh;
+  padding: 10px;
+  place-items: center;
+  background-color: #0d6efd;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 5px;
+  background-color: #fff;
+
+  header {
+    font-weight: 600;
+    font-size: 1.375rem;
+    padding: 1.25rem 1.875rem;
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  form {
+    margin: 2.1875rem 1.875rem;
+
+    .dbl-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5625rem;
+      justify-content: space-between;
+
+      .field {
+        height: 3.125rem;
+        width: calc(100% / 2 - 0.8125rem);
+      }
+    }
+
+    .field,
+    .message {
+      position: relative;
+
+      input,
+      textarea {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 0 1.125rem 0 3rem;
+        border: 1px solid #bfbfbf;
+
+        &::placeholder,
+        &::placeholder {
+          color: #bfbfbf;
+        }
+
+        &:focus,
+        &:focus {
+          border: 2px solid #0d6efd;
+
+          & ~ i {
+            color: #0d6efd;
+          }
+        }
+      }
+    }
+
+    .message {
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+        max-height: 300px;
+        padding: 0.9375rem 1.25rem 0 3rem;
+      }
+
+      i {
+        top: 1.875rem;
+        font-size: 1.375rem;
+      }
+    }
+
+    i {
+      top: 50%;
+      left: 1.125rem;
+      color: #bfbfbf;
+      position: absolute;
+      pointer-events: none;
+      font-size: 1.0625rem;
+      transform: translateY(-50%);
+    }
+
+    .button-area {
+      display: flex;
+      align-items: center;
+      margin: 1.5625rem 0;
+
+      button {
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.125rem;
+        background-color: #0d6efd;
+        padding: 0.8125rem 1.5625rem;
+      }
+
+      span {
+        color: #0d6efd;
+        user-select: none;
+        margin-left: 1.875rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    header {
+      text-align: center;
+    }
+
+    form {
+      .dbl-field {
+        margin-bottom: 0;
+        flex-direction: column;
+
+        .field {
+          width: 100%;
+          margin-bottom: 1.25rem;
+        }
+      }
+
+      .button-area {
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
+
+        span {
+          text-align: center;
+          margin: 1.25rem 0 0;
+        }
+      }
+    }
+  }
+}
